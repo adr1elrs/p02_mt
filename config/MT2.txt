@@ -1,0 +1,49 @@
+# MT2: sustituye una cadena de a/b por el numero de b's (unario), blanco, numero de a's (unario)
+q0 q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 q13 q14 q15
+a b
+a b 0 1 .
+q0
+.
+q15
+3
+q0 . . . q1 . L . S . S
+q0 a . . q0 a R 1 R . S
+q0 b . . q0 b R . S 1 R
+q1 . . . q2 . S . L . S
+q1 a . . q1 a L . S . S
+q1 b . . q1 b L . S . S
+q2 . . . q3 . S . S . L
+q2 . 1 . q2 . S 1 L . S
+q3 . . . q4 . S . S . R
+q3 . . 1 q3 . S . S 1 L
+q4 . . . q6 . R . S . L
+q4 . . 1 q5 . R . S 1 S
+q5 . . . q7 . S . S . S
+q5 a . . q7 a S . S . S
+q5 a . 1 q5 1 R . S 1 R
+q5 b . . q7 b S . S . S
+q5 b . 1 q5 1 R . S 1 R
+q6 . . . q7 0 R . S . S
+q6 a . . q7 0 R . S . S
+q7 . . . q8 . R . R . S
+q7 a . . q8 . R . R . S
+q7 b . . q8 . R . R . S
+q8 . . . q10 . S . S . S
+q8 . 1 . q9 . S 1 S . S
+q8 a 1 . q9 a S 1 S . S
+q8 b 1 . q9 b S 1 S . S
+q9 . . . q11 . L . S . S
+q9 . 1 . q9 1 R 1 R . S
+q9 a 1 . q9 1 R 1 R . S
+q9 b 1 . q9 1 R 1 R . S
+q10 . . . q11 0 S . S . S
+q11 . . . q12 . L . S . S
+q11 0 . . q11 0 L . S . S
+q11 1 . . q11 1 L . S . S
+q12 . . . q13 . S . L . S
+q12 0 . . q12 0 L . S . S
+q12 1 . . q12 1 L . S . S
+q13 . . . q14 . S . S . L
+q13 . 1 . q13 . S 1 L . S
+q14 . . . q15 . R . R . R
+q14 . . 1 q14 . S . S 1 L
