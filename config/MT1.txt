@@ -1,11 +1,12 @@
 # MT1: L = { a^n b^m | m >= n, n > 0 }
-q0 q1 q2 q3
+qs q0 q1 q2 q3
 a b
 a b .
-q0
+qs
 .
 q3
 2
+qs a . q0 a R a R
 q0 a . q0 a R a R
 q0 b . q1 b S . L
 q1 . . q2 . L . S
