@@ -74,7 +74,7 @@ std::string TuringMachine::ProcessFile(const std::string& in_path) {
   std::ifstream fichero(in_path);
   
   if (!fichero.is_open()) {
-    throw std::runtime_error("No se puede abrir el fichero de cadenas " + in_path);
+    throw std::runtime_error("No se pudo abrir el fichero de cadenas: " + in_path);
   }
 
   std::string report = "";
