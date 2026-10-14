@@ -8,13 +8,14 @@ de sus cabezales.
 
 ## Variaciones elegidas
 
-De las variaciones propuestas en el enunciado se han seleccionado:
+De las tres variaciones propuestas en el enunciado se ha seleccionado **una opción en cada
+fila**; las opciones elegidas son:
 
-| Variación | Opción elegida |
-|---|---|
-| Escritura y movimiento | **Simultáneos** (una transición escribe *y* mueve en un paso) |
-| Movimientos permitidos | **`L`, `R` y `S`** (izquierda, derecha, sin movimiento) |
-| Cinta | **Infinita en ambas direcciones** |
+- **Escritura y movimientos:** **simultáneos** (una transición escribe *y* mueve en el mismo
+  paso; no se usa el modelo de escritura y movimiento independientes).
+- **Movimientos permitidos:** **izquierda (`L`), derecha (`R`) y sin movimiento (`S`)** (no se
+  limita solo a `L`/`R`).
+- **Cinta:** **infinita en ambas direcciones** (no solo en una).
 
 Además, la MT es **determinista** y la ejecución **termina únicamente por ausencia de
 transición** (no se detectan bucles).
@@ -51,6 +52,11 @@ p02_mt/
 ├── test/                  # Script de pruebas + ficheros de error
 │   ├── run_errors.sh
 │   └── errors/error_*.txt
+├── media/                 # Grafos de las máquinas
+│   ├── MT1.png
+│   └── MT2.png
+├── MT1.jff                # Definición en JFLAP de MT1
+├── MT2.jff                # Definición en JFLAP de MT2
 ├── Makefile
 └── README.md
 ```
@@ -120,7 +126,17 @@ q0 a . . q0 a R 1 R . S
 | `config/MT2.txt` | Cuenta b's y a's (unario) | `q0..q15` | 3 | `{q15}` | 41 |
 
 Ambas se obtuvieron de los ficheros JFLAP `MT1.jff` / `MT2.jff` (el blanco vacío de JFLAP se
-traduce al símbolo `.`). La imagen de cada grafo se entrega junto con la práctica.
+traduce al símbolo `.`).
+
+### Grafos de las máquinas
+
+#### MT1 — `L = { aⁿbᵐ | m ≥ n, n > 0 }`
+
+![Grafo de la máquina MT1](media/MT1.png)
+
+#### MT2 — Cuenta de b's y a's (unario)
+
+![Grafo de la máquina MT2](media/MT2.png)
 
 ## Matriz de errores de configuración
 
